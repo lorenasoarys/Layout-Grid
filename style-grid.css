@@ -1,0 +1,103 @@
+body {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/004/968/002/original/cute-abstract-modern-background-free-vector.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "cabecalho"
+            "conteudo"
+            "periferico"
+            "rodape";
+    grid-gap: 5px 0px;
+}
+
+header {
+    grid-area: cabecalho;
+}
+
+.logo {
+    display:block;
+    margin: 0 auto;
+}
+
+.content {
+    grid-area: conteudo;
+}
+
+.menu-principal {
+    display: block;
+}
+
+.menu-principal > ul {
+    list-style: none;
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-do-ceu-em-aquarela-pintada-a-mao_23-2148902771.jpg);
+    padding: 5px;
+    
+}
+
+.menu-principal > ul > li {
+    display: block;
+    padding: 10px;
+    background: white;
+    border-bottom: 1px, solid, gray;
+}
+
+.menu-principal > ul > li:hover {
+    background-image: url(https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-zoom-virtual-background-_Tcjok-d9b4.jpg);
+    color: white;
+}
+aside {
+    grid-area: periferico
+}
+
+aside > .box-lateral {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/004/968/002/original/cute-abstract-modern-background-free-vector.jpg);
+    padding-bottom: 20px;
+}
+
+.box-noticia p, .box-noticia h2 {
+    margin-top: 2px;
+}
+
+.box-noticia h2 {
+    margin-top: 0;
+}
+
+@media (min-width: 700px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 150px 1fr 120px;
+        grid-template-areas: "cabecalho cabecalho"
+                     "periferico conteudo"
+                     "rodape rodape";
+        grid-gap: 5px 20px;
+    }
+    
+    .logo {
+         width: 220px;
+         float: left;
+    }
+
+    .menu-principal {
+        float: center;
+    }
+
+    .menu-principal > ul > li {
+        display:inline-block;
+    }
+
+    .content {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .content > .box-noticia {
+        width: 30%;
+        min-width: 250px;
+        flex-grow: 2; 
+    }
+}
